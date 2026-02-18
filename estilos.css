@@ -1,104 +1,79 @@
-/* ===== ESTILO GENERAL ===== */
+/* Importar fuente moderna */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
 
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
+    font-family: 'Inter', sans-serif;
     background: linear-gradient(135deg, #0f172a, #1e293b);
+    margin: 0;
+    padding: 0;
     color: #e2e8f0;
 }
 
-/* ===== HEADER ===== */
-
-header {
-    background: linear-gradient(135deg, #306998, #ffd43b);
-    color: #0f172a;
-    text-align: center;
-    padding: 30px 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2em;
-}
-
-header p {
-    margin-top: 10px;
-    font-size: 1.1em;
-    font-weight: 500;
-}
-
-/* ===== CONTENEDOR ===== */
-
-.contenedor {
+/* Contenedor principal */
+.container {
     max-width: 1000px;
     margin: auto;
-    padding: 30px 20px;
+    padding: 40px 20px;
 }
 
-/* ===== TARJETAS ===== */
+/* Título principal */
+h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-weight: 700;
+    color: #38bdf8;
+}
 
+/* Tarjetas de ejercicios */
 .card {
     background: #1e293b;
-    border-radius: 15px;
+    border-radius: 16px;
     padding: 25px;
     margin-bottom: 25px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    transition: transform 0.25s, box-shadow 0.25s;
-    border-left: 6px solid #ffd43b;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: 0.3s;
+    border: 1px solid #334155;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 12px 25px rgba(0,0,0,0.6);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
 }
 
-/* ===== TITULOS ===== */
-
-h2 {
-    color: #ffd43b;
+/* Título del ejercicio */
+.card h2 {
+    color: #22c55e;
     margin-top: 0;
 }
 
-h3 {
-    color: #93c5fd;
+/* Texto */
+.card p {
+    line-height: 1.6;
+    color: #cbd5f5;
 }
 
-/* ===== LISTAS ===== */
-
-ul, ol {
-    margin-left: 20px;
+/* Código o bloques */
+code {
+    background: #0f172a;
+    padding: 3px 6px;
+    border-radius: 6px;
+    color: #38bdf8;
 }
 
-li {
-    margin-bottom: 6px;
+/* Botón opcional */
+.button {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 18px;
+    border-radius: 8px;
+    background: #38bdf8;
+    color: #0f172a;
+    font-weight: 600;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-/* ===== TEXTOS ===== */
-
-strong {
-    color: #facc15;
+.button:hover {
+    background: #0ea5e9;
 }
 
-/* ===== FOOTER ===== */
-
-footer {
-    background: #020617;
-    text-align: center;
-    padding: 15px;
-    font-size: 0.9em;
-    color: #94a3b8;
-    border-top: 2px solid #ffd43b;
-}
-
-/* ===== RESPONSIVE ===== */
-
-@media (max-width: 600px) {
-    header h1 {
-        font-size: 1.5em;
-    }
-
-    .card {
-        padding: 18px;
-    }
-}
