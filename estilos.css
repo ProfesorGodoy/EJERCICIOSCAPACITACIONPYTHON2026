@@ -1,96 +1,101 @@
-/* ===== Reset básico ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+/* ===== ESTILO GENERAL ===== */
 
-/* ===== Fuente general ===== */
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #eef2f7, #d9e4f5);
-    color: #333;
-    line-height: 1.6;
+    margin: 0;
+    background: linear-gradient(135deg, #0f172a, #1e293b);
+    color: #e2e8f0;
 }
 
-/* ===== Header ===== */
+/* ===== HEADER ===== */
+
 header {
-    background: linear-gradient(135deg, #0d47a1, #1976d2);
-    color: white;
+    background: linear-gradient(135deg, #306998, #ffd43b);
+    color: #0f172a;
     text-align: center;
     padding: 30px 20px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 header h1 {
-    font-size: 2.2rem;
-    margin-bottom: 5px;
+    margin: 0;
+    font-size: 2em;
 }
 
 header p {
-    font-size: 1.1rem;
-    opacity: 0.9;
+    margin-top: 10px;
+    font-size: 1.1em;
+    font-weight: 500;
 }
 
-/* ===== Contenedor ===== */
+/* ===== CONTENEDOR ===== */
+
 .contenedor {
     max-width: 1000px;
-    margin: 40px auto;
-    padding: 20px;
-    display: grid;
-    gap: 25px;
+    margin: auto;
+    padding: 30px 20px;
 }
 
-/* ===== Tarjetas ===== */
+/* ===== TARJETAS ===== */
+
 .card {
-    background: white;
+    background: #1e293b;
     border-radius: 15px;
     padding: 25px;
-    box-shadow: 0 6px 18px rgba(0,0,0,0.15);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-    border-left: 8px solid #1976d2;
+    margin-bottom: 25px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    transition: transform 0.25s, box-shadow 0.25s;
+    border-left: 6px solid #ffd43b;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    box-shadow: 0 12px 25px rgba(0,0,0,0.6);
 }
 
-/* ===== Títulos ===== */
-.card h2 {
-    color: #0d47a1;
-    margin-bottom: 15px;
+/* ===== TITULOS ===== */
+
+h2 {
+    color: #ffd43b;
+    margin-top: 0;
 }
 
-/* ===== Listas ===== */
+h3 {
+    color: #93c5fd;
+}
+
+/* ===== LISTAS ===== */
+
 ul, ol {
     margin-left: 20px;
-    margin-bottom: 15px;
 }
 
 li {
-    margin-bottom: 8px;
+    margin-bottom: 6px;
 }
 
-/* ===== Objetivo ===== */
-.card p strong {
-    color: #0d47a1;
+/* ===== TEXTOS ===== */
+
+strong {
+    color: #facc15;
 }
 
-/* ===== Footer ===== */
+/* ===== FOOTER ===== */
+
 footer {
+    background: #020617;
     text-align: center;
-    padding: 20px;
-    background: #0d47a1;
-    color: white;
-    margin-top: 40px;
-    font-size: 0.9rem;
+    padding: 15px;
+    font-size: 0.9em;
+    color: #94a3b8;
+    border-top: 2px solid #ffd43b;
 }
 
-/* ===== Responsive ===== */
-@media (max-width: 768px) {
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 600px) {
     header h1 {
-        font-size: 1.6rem;
+        font-size: 1.5em;
     }
 
     .card {
