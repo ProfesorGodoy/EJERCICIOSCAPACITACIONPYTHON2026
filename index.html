@@ -18,9 +18,53 @@
             right: 20px;
             width: 120px;
         }
+
+        #reloj {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 18px;
+            color: #38bdf8;
+            background: rgba(2, 6, 23, 0.7);
+            padding: 8px 14px;
+            border-radius: 8px;
+            border: 1px solid #3b82f6;
+            box-shadow: 0 0 10px rgba(59,130,246,0.4);
+            font-weight: 500;
+        }
     </style>
 </head>
-    <script>
+
+<body>
+
+<header>
+
+    <div id="reloj">
+        <span id="fecha"></span> | <span id="hora"></span>
+    </div>
+
+    <img src="img/eest2.JPG" alt="Logo EEST2" class="logo">
+
+    <h1>Capacitación Docente 2026 - PYTHON - PLC</h1>
+    <p>Introducción a la Programación orientada a PLC</p>
+
+</header>
+
+<main class="contenedor">
+
+    <section class="card">
+        <h2>Actividad 1 — Algoritmo</h2>
+        <p>Actividad grupal: Ordenar tarjetas impresas.</p>
+    </section>
+
+</main>
+
+<footer>
+    <p>Capacitación — Introducción a Python orientada a PLC</p>
+</footer>
+
+<!-- ✅ SCRIPT CORRECTAMENTE UBICADO -->
+<script>
 
 async function actualizarHora() {
 
@@ -54,122 +98,6 @@ actualizarHora();
 setInterval(actualizarHora, 60000);
 
 </script>
-
-<body>
-
-<header>
-    <div id="reloj">
-    <span id="fecha"></span> | <span id="hora"></span>
-    </div>
-
-    <img src="img/eest2.JPG" alt="Logo EEST2" class="logo">
-
-    <h1>Capacitación Docente 2026 - PYTHON - PLC</h1>
-    <p>Introducción a la Programación orientada a PLC</p>
-
-</header>
-
-<main class="contenedor">
-
-    <!-- ACTIVIDAD 1 -->
-    <section class="card">
-        <h2>Actividad 1 — Algoritmo</h2>
-
-        <p>Actividad grupal: Ordenar tarjetas impresas.</p>
-
-        <ul>
-            <li>Se entregarán tarjetas con pasos de un proceso.</li>
-            <li>El grupo deberá ordenar las tarjetas correctamente.</li>
-            <li>Identificar si existe alguna tarjeta incorrecta.</li>
-            <li>Explicar por qué eligieron ese orden.</li>
-        </ul>
-
-        <p>Objetivo: Comprender que un algoritmo es una secuencia de pasos ordenados.</p>
-    </section>
-
-    <!-- ACTIVIDAD 2 -->
-    <section class="card">
-        <h2>Actividad 2 — Programación con función print()</h2>
-
-        <p>Resolver las siguientes consignas utilizando Python y la función print().</p>
-
-        <ol>
-            <li>Mostrar en pantalla los pasos para encender una máquina.</li>
-            <li>Mostrar el proceso de llenado de un tanque de agua.</li>
-            <li>Mostrar qué ocurre cuando una puerta automática se abre y se cierra.</li>
-            <li>Mostrar el recorrido de una caja en una cinta transportadora.</li>
-            <li>Mostrar las luces de un semáforo en orden.</li>
-        </ol>
-
-        <p>Objetivo: Comprender que un programa es una secuencia de instrucciones.</p>
-    </section>
-
-    <!-- ACTIVIDAD 3 -->
-    <section class="card">
-        <h2>Actividad 3 — Entrada de Datos</h2>
-
-        <p>Resolver las siguientes consignas utilizando Python y la función input().</p>
-
-        <ol>
-            <li>Ingresar un número que represente el estado de un pulsador y mostrarlo en pantalla.</li>
-            <li>Ingresar una temperatura y mostrarla en pantalla.</li>
-            <li>Ingresar la cantidad de piezas producidas y mostrarla.</li>
-            <li>Ingresar el nivel de un tanque y mostrarlo.</li>
-            <li>Ingresar la velocidad de una máquina y mostrarla.</li>
-        </ol>
-
-        <p>Objetivo: Comprender cómo un programa puede recibir datos del usuario.</p>
-    </section>
-
-    <!-- ACTIVIDAD 4 -->
-    <section class="card">
-        <h2>Actividad 4 — Operadores en Python</h2>
-
-        <p>Resolver los siguientes ejercicios utilizando variables, operadores matemáticos y operadores de comparación.</p>
-
-        <h3>Ejercicio 1 — Suma de dos números</h3>
-        <p>Crear dos variables con valores numéricos y mostrar en pantalla el resultado de la suma.</p>
-
-        <h3>Ejercicio 2 — Operaciones matemáticas básicas</h3>
-        <p>Crear dos variables numéricas y mostrar:</p>
-        <ul>
-            <li>La suma</li>
-            <li>La resta</li>
-            <li>La multiplicación</li>
-            <li>La división</li>
-        </ul>
-
-        <h3>Ejercicio 3 — Comparación de números</h3>
-        <p>Crear dos variables con números distintos y mostrar en pantalla:</p>
-        <ul>
-            <li>Si el primero es mayor que el segundo</li>
-            <li>Si son iguales</li>
-            <li>Si son diferentes</li>
-        </ul>
-
-        <h3>Ejercicio 4 — Edad</h3>
-        <p>Crear una variable llamada edad con un valor numérico y mostrar:</p>
-        <ul>
-            <li>Si la edad es mayor que 17</li>
-            <li>Si la edad es igual a 18</li>
-            <li>Si la edad es diferente de 21</li>
-        </ul>
-
-        <h3>Ejercicio 5 — Precios</h3>
-        <p>Crear dos variables con precios de productos y mostrar:</p>
-        <ul>
-            <li>El total de la compra</li>
-            <li>La diferencia entre los precios</li>
-            <li>Si el primer precio es mayor que el segundo</li>
-        </ul>
-
-    </section>
-
-</main>
-
-<footer>
-    <p>Capacitación — Introducción a Python orientada a PLC</p>
-</footer>
 
 </body>
 </html>
