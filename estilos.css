@@ -10,7 +10,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #0b132b, #020617);
+    background: linear-gradient(135deg, #0b1120, #020617);
     color: #e2e8f0;
     line-height: 1.6;
 }
@@ -19,39 +19,22 @@ body {
 
 header {
     position: relative;
-    background: linear-gradient(135deg, #1c2541, #020617);
-    padding: 45px 20px;
+    background: linear-gradient(135deg, #0f172a, #020617);
+    padding: 50px 20px 30px 20px;
     text-align: center;
-    border-bottom: 3px solid #FFD43B;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+    border-bottom: 3px solid #3776AB; /* azul Python */
+    box-shadow: 0 4px 25px rgba(0,0,0,0.5);
 }
 
 header h1 {
     font-size: 30px;
     margin-bottom: 10px;
-    color: #FFD43B;
+    color: #FFD43B; /* amarillo Python */
 }
 
 header p {
-    color: #9fb3c8;
-    font-size: 16px;
-}
-
-/* ===== RELOJ SUPERIOR IZQUIERDO ===== */
-
-#reloj {
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    font-size: 15px;
-    color: #FFD43B;
-    background: rgba(2, 6, 23, 0.85);
-    padding: 8px 14px;
-    border-radius: 8px;
-    border: 1px solid #306998;
-    box-shadow: 0 0 12px rgba(48,105,152,0.6);
-    font-weight: 500;
-    backdrop-filter: blur(6px);
+    color: #94a3b8;
+    font-size: 17px;
 }
 
 /* ===== LOGO ===== */
@@ -62,12 +45,39 @@ header p {
     right: 20px;
     width: 110px;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(48,105,152,0.7);
+    box-shadow: 0 0 20px rgba(55,118,171,0.6);
     transition: transform 0.3s;
 }
 
 .logo:hover {
     transform: scale(1.05);
+}
+
+/* ===== RELOJ ===== */
+
+#reloj {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    text-align: left;
+    color: #FFD43B;
+    background: rgba(2, 6, 23, 0.85);
+    padding: 10px 16px;
+    border-radius: 10px;
+    border: 1px solid #3776AB;
+    box-shadow: 0 0 15px rgba(55,118,171,0.4);
+    font-weight: 500;
+}
+
+#fecha {
+    font-size: 14px;
+    color: #94a3b8;
+}
+
+#hora {
+    font-size: 22px;
+    font-weight: bold;
+    color: #FFD43B;
 }
 
 /* ===== CONTENEDOR ===== */
@@ -82,8 +92,8 @@ header p {
 
 .card {
     position: relative;
-    background: linear-gradient(145deg, #020617, #0b132b);
-    border: 1px solid #1c2541;
+    background: linear-gradient(145deg, #020617, #0f172a);
+    border: 1px solid #1e293b;
     border-radius: 15px;
     padding: 25px;
     margin-bottom: 25px;
@@ -92,11 +102,11 @@ header p {
 }
 
 .card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 35px rgba(48,105,152,0.4);
+    transform: translateY(-6px);
+    box-shadow: 0 12px 40px rgba(55,118,171,0.35);
 }
 
-/* ===== BORDE TECNOLOGICO PYTHON ===== */
+/* ===== BORDE TECNOLOGICO ===== */
 
 .card::before {
     content: "";
@@ -104,12 +114,12 @@ header p {
     inset: 0;
     border-radius: 15px;
     padding: 1px;
-    background: linear-gradient(45deg, #306998, #FFD43B, #306998);
-    -webkit-mask:
-        linear-gradient(#000 0 0) content-box,
+    background: linear-gradient(45deg, #3776AB, transparent, #FFD43B);
+    -webkit-mask: 
+        linear-gradient(#000 0 0) content-box, 
         linear-gradient(#000 0 0);
     -webkit-mask-composite: xor;
-    mask-composite: exclude;
+            mask-composite: exclude;
     pointer-events: none;
 }
 
@@ -121,7 +131,7 @@ h2 {
 }
 
 h3 {
-    color: #4ea1ff;
+    color: #60a5fa;
     margin-top: 15px;
 }
 
@@ -143,17 +153,28 @@ footer {
     text-align: center;
     padding: 20px;
     background: #020617;
-    border-top: 2px solid #FFD43B;
-    color: #9fb3c8;
+    border-top: 2px solid #3776AB;
+    color: #94a3b8;
     margin-top: 40px;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ===== RESPONSIVE CELULAR ===== */
 
 @media (max-width: 768px) {
 
+    #reloj {
+        position: static;   /* evita que tape el titulo */
+        margin-bottom: 15px;
+        display: inline-block;
+    }
+
+    header {
+        padding-top: 25px;
+    }
+
     header h1 {
         font-size: 22px;
+        margin-top: 10px;
     }
 
     .logo {
@@ -164,11 +185,5 @@ footer {
 
     .card {
         padding: 18px;
-    }
-
-    #reloj {
-        font-size: 13px;
-        top: 10px;
-        left: 10px;
     }
 }
