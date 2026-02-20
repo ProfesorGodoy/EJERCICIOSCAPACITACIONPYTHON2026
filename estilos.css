@@ -147,5 +147,19 @@ footer {
     .card {
         padding: 18px;
     }
+    
+#reloj {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    color: #38bdf8;
+    background: rgba(2, 6, 23, 0.7);
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #3b82f6;
+    box-shadow: 0 0 10px rgba(59,130,246,0.4);
+    font-weight: 500;
+}
 
 }
