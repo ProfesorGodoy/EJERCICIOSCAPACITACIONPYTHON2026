@@ -11,7 +11,7 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     background: linear-gradient(135deg, #0b1120, #020617);
-    color: #e2e8f0;
+    color: #e5e7eb;
     line-height: 1.6;
 }
 
@@ -19,22 +19,38 @@ body {
 
 header {
     position: relative;
-    background: linear-gradient(135deg, #0f172a, #020617);
-    padding: 50px 20px 30px 20px;
+    background: linear-gradient(135deg, #111827, #020617);
+    padding: 40px 20px;
     text-align: center;
-    border-bottom: 3px solid #3776AB; /* azul Python */
-    box-shadow: 0 4px 25px rgba(0,0,0,0.5);
+    border-bottom: 3px solid #3776ab; /* azul Python */
+    box-shadow: 0 4px 25px rgba(0,0,0,0.4);
 }
 
 header h1 {
-    font-size: 30px;
+    font-size: 28px;
     margin-bottom: 10px;
-    color: #FFD43B; /* amarillo Python */
+    color: #ffd43b; /* amarillo Python */
 }
 
 header p {
-    color: #94a3b8;
-    font-size: 17px;
+    color: #9ca3af;
+    font-size: 16px;
+}
+
+/* ===== RELOJ ===== */
+
+#reloj {
+    position: absolute;
+    top: 15px;
+    left: 20px;
+    font-size: 16px;
+    color: #ffd43b;
+    background: rgba(2, 6, 23, 0.8);
+    padding: 8px 14px;
+    border-radius: 10px;
+    border: 1px solid #3776ab;
+    box-shadow: 0 0 12px rgba(55,118,171,0.4);
+    font-weight: 500;
 }
 
 /* ===== LOGO ===== */
@@ -45,39 +61,12 @@ header p {
     right: 20px;
     width: 110px;
     border-radius: 10px;
-    box-shadow: 0 0 20px rgba(55,118,171,0.6);
+    box-shadow: 0 0 15px rgba(55,118,171,0.6);
     transition: transform 0.3s;
 }
 
 .logo:hover {
     transform: scale(1.05);
-}
-
-/* ===== RELOJ ===== */
-
-#reloj {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    text-align: left;
-    color: #FFD43B;
-    background: rgba(2, 6, 23, 0.85);
-    padding: 10px 16px;
-    border-radius: 10px;
-    border: 1px solid #3776AB;
-    box-shadow: 0 0 15px rgba(55,118,171,0.4);
-    font-weight: 500;
-}
-
-#fecha {
-    font-size: 14px;
-    color: #94a3b8;
-}
-
-#hora {
-    font-size: 22px;
-    font-weight: bold;
-    color: #FFD43B;
 }
 
 /* ===== CONTENEDOR ===== */
@@ -97,13 +86,13 @@ header p {
     border-radius: 15px;
     padding: 25px;
     margin-bottom: 25px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.6);
+    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
     transition: 0.3s;
 }
 
 .card:hover {
-    transform: translateY(-6px);
-    box-shadow: 0 12px 40px rgba(55,118,171,0.35);
+    transform: translateY(-5px);
+    box-shadow: 0 10px 35px rgba(55,118,171,0.3);
 }
 
 /* ===== BORDE TECNOLOGICO ===== */
@@ -114,7 +103,7 @@ header p {
     inset: 0;
     border-radius: 15px;
     padding: 1px;
-    background: linear-gradient(45deg, #3776AB, transparent, #FFD43B);
+    background: linear-gradient(45deg, #3776ab, transparent, #ffd43b);
     -webkit-mask: 
         linear-gradient(#000 0 0) content-box, 
         linear-gradient(#000 0 0);
@@ -126,7 +115,7 @@ header p {
 /* ===== TITULOS ===== */
 
 h2 {
-    color: #FFD43B;
+    color: #ffd43b;
     margin-bottom: 15px;
 }
 
@@ -144,7 +133,7 @@ ul, ol {
 }
 
 li {
-    margin-bottom: 6px;
+    margin-bottom: 5px;
 }
 
 /* ===== FOOTER ===== */
@@ -153,37 +142,41 @@ footer {
     text-align: center;
     padding: 20px;
     background: #020617;
-    border-top: 2px solid #3776AB;
-    color: #94a3b8;
+    border-top: 2px solid #3776ab;
+    color: #9ca3af;
     margin-top: 40px;
 }
 
-/* ===== RESPONSIVE CELULAR ===== */
+/* ===== RESPONSIVE MOVILES (SOLUCION DEFINITIVA) ===== */
 
-@media (max-width: 768px) {
-
-    #reloj {
-        position: static;   /* evita que tape el titulo */
-        margin-bottom: 15px;
-        display: inline-block;
-    }
+@media screen and (max-width: 900px) {
 
     header {
-        padding-top: 25px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 20px;
+    }
+
+    #reloj {
+        position: relative;
+        top: auto;
+        left: auto;
+        margin-bottom: 10px;
+        text-align: center;
+        font-size: 15px;
     }
 
     header h1 {
         font-size: 22px;
-        margin-top: 10px;
+        margin-top: 5px;
     }
 
     .logo {
+        position: relative;
+        top: auto;
+        right: auto;
+        margin-top: 10px;
         width: 80px;
-        top: 10px;
-        right: 10px;
-    }
-
-    .card {
-        padding: 18px;
     }
 }
