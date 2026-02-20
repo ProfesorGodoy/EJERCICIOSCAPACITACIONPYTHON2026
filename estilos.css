@@ -37,6 +37,23 @@ header p {
     font-size: 16px;
 }
 
+/* ===== RELOJ ===== */
+
+#reloj {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 18px;
+    color: #38bdf8;
+    background: rgba(2, 6, 23, 0.7);
+    padding: 8px 14px;
+    border-radius: 8px;
+    border: 1px solid #3b82f6;
+    box-shadow: 0 0 10px rgba(59,130,246,0.4);
+    font-weight: 500;
+    z-index: 10;
+}
+
 /* ===== LOGO ===== */
 
 .logo {
@@ -64,6 +81,7 @@ header p {
 /* ===== CARDS ===== */
 
 .card {
+    position: relative;
     background: linear-gradient(145deg, #020617, #0f172a);
     border: 1px solid #1e293b;
     border-radius: 15px;
@@ -76,6 +94,23 @@ header p {
 .card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 35px rgba(59,130,246,0.3);
+}
+
+/* ===== EFECTO BORDE TECNOLOGICO ===== */
+
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 15px;
+    padding: 1px;
+    background: linear-gradient(45deg, #3b82f6, transparent, #3b82f6);
+    -webkit-mask:
+        linear-gradient(#000 0 0) content-box,
+        linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
 }
 
 /* ===== TITULOS ===== */
@@ -113,23 +148,6 @@ footer {
     margin-top: 40px;
 }
 
-/* ===== EFECTO TECNOLOGICO SUAVE ===== */
-
-.card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 15px;
-    padding: 1px;
-    background: linear-gradient(45deg, #3b82f6, transparent, #3b82f6);
-    -webkit-mask: 
-        linear-gradient(#000 0 0) content-box, 
-        linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-            mask-composite: exclude;
-    pointer-events: none;
-}
-
 /* ===== RESPONSIVE ===== */
 
 @media (max-width: 768px) {
@@ -147,19 +165,10 @@ footer {
     .card {
         padding: 18px;
     }
-    
-#reloj {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-    font-size: 18px;
-    color: #38bdf8;
-    background: rgba(2, 6, 23, 0.7);
-    padding: 8px 14px;
-    border-radius: 8px;
-    border: 1px solid #3b82f6;
-    box-shadow: 0 0 10px rgba(59,130,246,0.4);
-    font-weight: 500;
-}
+
+    #reloj {
+        font-size: 14px;
+        padding: 6px 10px;
+    }
 
 }
