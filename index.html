@@ -1,206 +1,163 @@
-/* ===== RESET ===== */
+<!DOCTYPE html>
+<html lang="es">
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<head>
+    <meta charset="UTF-8">
+    <title>Capacitación Python - Ejercicios</title>
+    <link rel="stylesheet" href="estilos.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
 
-/* ===== BODY ===== */
+<body>
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: linear-gradient(135deg, #0b1120, #020617);
-    color: #e5e7eb;
-    line-height: 1.6;
-}
+<header>
 
-/* ===== HEADER ===== */
+    <!-- RELOJ -->
+    <div id="reloj">
+        <span id="fecha"></span><br>
+        <span id="hora"></span>
+    </div>
 
-header {
-    position: relative;
-    background: linear-gradient(135deg, #111827, #020617);
-    padding: 40px 20px;
-    text-align: center;
-    border-bottom: 3px solid #3776ab;
-    box-shadow: 0 4px 25px rgba(0,0,0,0.4);
-}
+    <!-- LOGO -->
+    <img src="img/eest2.JPG" alt="Logo EEST2" class="logo">
 
-header h1 {
-    font-size: 28px;
-    margin-bottom: 10px;
-    color: #ffd43b;
-}
+    <h1>Capacitación Docente 2026 - PYTHON - PLC</h1>
+    <p>Introducción a la Programación orientada a PLC</p>
 
-header p {
-    color: #9ca3af;
-    font-size: 16px;
-}
+</header>
 
-/* ===== RELOJ ===== */
+<main class="contenedor">
 
-#reloj {
-    position: absolute;
-    top: 15px;
-    left: 20px;
-    font-size: 16px;
-    color: #ffd43b;
-    background: rgba(2, 6, 23, 0.8);
-    padding: 8px 14px;
-    border-radius: 10px;
-    border: 1px solid #3776ab;
-    box-shadow: 0 0 12px rgba(55,118,171,0.4);
-    font-weight: 500;
-}
+    <!-- ACTIVIDAD 1 -->
+    <section class="card">
+        <h2>Actividad 1 — Algoritmo</h2>
 
-/* ===== LOGO ===== */
+        <p>Actividad grupal: Ordenar tarjetas impresas.</p>
 
-.logo {
-    position: absolute;
-    top: 15px;
-    right: 20px;
-    width: 110px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(55,118,171,0.6);
-    transition: transform 0.3s;
-}
+        <ul>
+            <li>Se entregarán tarjetas con pasos de un proceso.</li>
+            <li>El grupo deberá ordenar las tarjetas correctamente.</li>
+            <li>Identificar si existe alguna tarjeta incorrecta.</li>
+            <li>Explicar por qué eligieron ese orden.</li>
+        </ul>
 
-.logo:hover {
-    transform: scale(1.05);
-}
+        <p>Objetivo: Comprender que un algoritmo es una secuencia de pasos ordenados.</p>
+    </section>
 
-/* ===== CONTENEDOR ===== */
+    <!-- ACTIVIDAD 2 -->
+    <section class="card">
+        <h2>Actividad 2 — Programación con función print()</h2>
 
-.contenedor {
-    max-width: 1100px;
-    margin: auto;
-    padding: 30px 20px;
-}
+        <p>Resolver las siguientes consignas utilizando Python y la función print().</p>
 
-/* ===== CARDS ===== */
+        <ol>
+            <li>Mostrar en pantalla los pasos para encender una máquina.</li>
+            <li>Mostrar el proceso de llenado de un tanque de agua.</li>
+            <li>Mostrar qué ocurre cuando una puerta automática se abre y se cierra.</li>
+            <li>Mostrar el recorrido de una caja en una cinta transportadora.</li>
+            <li>Mostrar las luces de un semáforo en orden.</li>
+        </ol>
+    </section>
 
-.card {
-    position: relative;
-    background: linear-gradient(145deg, #020617, #0f172a);
-    border: 1px solid #1e293b;
-    border-radius: 15px;
-    padding: 25px;
-    margin-bottom: 25px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
-    transition: 0.3s;
-}
+    <!-- ACTIVIDAD 3 -->
+    <section class="card">
+        <h2>Actividad 3 — Entrada de Datos</h2>
 
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 35px rgba(55,118,171,0.3);
-}
+        <p>Resolver las siguientes consignas utilizando Python y la función input().</p>
 
-/* ===== BORDE TECNOLOGICO ===== */
+        <ol>
+            <li>Ingresar un número que represente el estado de un pulsador y mostrarlo en pantalla.</li>
+            <li>Ingresar una temperatura y mostrarla en pantalla.</li>
+            <li>Ingresar la cantidad de piezas producidas y mostrarla.</li>
+            <li>Ingresar el nivel de un tanque y mostrarlo.</li>
+            <li>Ingresar la velocidad de una máquina y mostrarla.</li>
+        </ol>
+    </section>
 
-.card::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    border-radius: 15px;
-    padding: 1px;
-    background: linear-gradient(45deg, #3776ab, transparent, #ffd43b);
-    -webkit-mask: 
-        linear-gradient(#000 0 0) content-box, 
-        linear-gradient(#000 0 0);
-    -webkit-mask-composite: xor;
-            mask-composite: exclude;
-    pointer-events: none;
-}
+    <!-- ACTIVIDAD 4 -->
+    <section class="card">
+        <h2>Actividad 4 — Operadores en Python</h2>
 
-/* ===== TITULOS ===== */
+        <p>Resolver ejercicios utilizando variables y operadores.</p>
 
-h2 {
-    color: #ffd43b;
-    margin-bottom: 15px;
-}
+        <ul>
+            <li>Suma de dos números</li>
+            <li>Operaciones matemáticas básicas</li>
+            <li>Comparación de números</li>
+            <li>Edad</li>
+            <li>Precios</li>
+        </ul>
+    </section>
 
-h3 {
-    color: #60a5fa;
-    margin-top: 15px;
-}
+    <!-- ACTIVIDAD 5 -->
+    <section class="card">
+        <h2>Actividad 5 — Toma de decisiones (if)</h2>
 
-/* ===== LISTAS ===== */
+        <ul>
+            <li>Sensor de temperatura</li>
+            <li>Pulsador de arranque</li>
+            <li>Nivel de tanque</li>
+        </ul>
+    </section>
 
-ul, ol {
-    margin-left: 20px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
 
-li {
-    margin-bottom: 5px;
-}
+    <!-- ENCUESTA -->
+    <section class="card encuesta">
+        <h2>Encuesta Final de la Capacitación</h2>
 
-/* ===== ENCUESTA ===== */
+        <p>Tu opinión es muy importante para mejorar futuras capacitaciones.</p>
 
-.encuesta {
-    text-align: center;
-}
+        <a href="https://tally.so/r/2Ee7Ej" target="_blank" class="boton-encuesta">
+            📊 RESPONDER ENCUESTA
+        </a>
 
-.boton-encuesta {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 16px 32px;
-    font-size: 18px;
-    background: linear-gradient(45deg, #3776ab, #ffd43b);
-    color: #020617;
-    text-decoration: none;
-    border-radius: 12px;
-    font-weight: bold;
-    letter-spacing: 1px;
-    transition: 0.3s;
-    box-shadow: 0 5px 20px rgba(55,118,171,0.4);
-}
+        <div class="iframe-container">
+            <iframe src="https://tally.so/embed/2Ee7Ej?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+                loading="lazy" frameborder="0" marginheight="0" marginwidth="0"></iframe>
+        </div>
 
-.boton-encuesta:hover {
-    transform: scale(1.07);
-    box-shadow: 0 10px 30px rgba(255,212,59,0.4);
-}
+    </section>
 
-/* ===== FOOTER ===== */
+</main>
 
-footer {
-    text-align: center;
-    padding: 20px;
-    background: #020617;
-    border-top: 2px solid #3776ab;
-    color: #9ca3af;
-    margin-top: 40px;
-}
+<footer>
+    <p>Capacitación — Introducción a Python orientada a PLC</p>
+</footer>
 
-/* ===== RESPONSIVE MOVILES ===== */
 
-@media screen and (max-width: 900px) {
+<!-- SCRIPT RELOJ ONLINE -->
+<script>
 
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding-top: 20px;
-    }
+async function actualizarHora() {
+    try {
 
-    #reloj {
-        position: absolute;
-        top: 10px;
-        left: 10px;
-        font-size: 14px;
-    }
+        const response = await fetch("https://timeapi.io/api/Time/current/zone?timeZone=America/Argentina/Buenos_Aires");
+        const data = await response.json();
 
-    .logo {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        width: 70px;
-    }
+        const datetime = new Date(data.dateTime);
 
-    header h1 {
-        margin-top: 90px;
-        font-size: 22px;
-        text-align: center;
+        const opcionesFecha = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+
+        const fecha = datetime.toLocaleDateString('es-AR', opcionesFecha);
+        const hora = datetime.toLocaleTimeString('es-AR');
+
+        document.getElementById("fecha").textContent = fecha;
+        document.getElementById("hora").textContent = hora;
+
+    } catch (error) {
+        console.log("Error al obtener la hora");
     }
 }
+
+actualizarHora();
+setInterval(actualizarHora, 30000);
+
+</script>
+
+</body>
+</html>
