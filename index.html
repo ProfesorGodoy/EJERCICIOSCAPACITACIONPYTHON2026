@@ -20,6 +20,41 @@
         }
     </style>
 </head>
+    <script>
+
+async function actualizarHora() {
+
+    try {
+
+        const response = await fetch("https://worldtimeapi.org/api/timezone/America/Argentina/Buenos_Aires");
+        const data = await response.json();
+
+        const datetime = new Date(data.datetime);
+
+        const opcionesFecha = {
+            weekday: 'long',
+            year: 'numeric',
+            month: 'long',
+            day: 'numeric'
+        };
+
+        const fecha = datetime.toLocaleDateString('es-AR', opcionesFecha);
+        const hora = datetime.toLocaleTimeString('es-AR');
+
+        document.getElementById("fecha").textContent = fecha;
+        document.getElementById("hora").textContent = hora;
+
+    } catch (error) {
+        console.log("Error al obtener la hora");
+    }
+
+}
+
+actualizarHora();
+setInterval(actualizarHora, 60000);
+
+</script>
+
 <body>
 
 <header>
