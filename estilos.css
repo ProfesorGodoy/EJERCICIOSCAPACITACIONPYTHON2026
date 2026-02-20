@@ -43,15 +43,14 @@ header p {
     position: absolute;
     top: 20px;
     left: 20px;
-    font-size: 18px;
+    font-size: 16px;
     color: #38bdf8;
-    background: rgba(2, 6, 23, 0.7);
+    background: rgba(2, 6, 23, 0.8);
     padding: 8px 14px;
     border-radius: 8px;
     border: 1px solid #3b82f6;
     box-shadow: 0 0 10px rgba(59,130,246,0.4);
     font-weight: 500;
-    z-index: 10;
 }
 
 /* ===== LOGO ===== */
@@ -96,7 +95,7 @@ header p {
     box-shadow: 0 10px 35px rgba(59,130,246,0.3);
 }
 
-/* ===== EFECTO BORDE TECNOLOGICO ===== */
+/* ===== BORDE TECNOLOGICO ===== */
 
 .card::before {
     content: "";
@@ -168,7 +167,7 @@ footer {
 
     #reloj {
         font-size: 14px;
-        padding: 6px 10px;
+        top: 10px;
+        left: 10px;
     }
-
 }
