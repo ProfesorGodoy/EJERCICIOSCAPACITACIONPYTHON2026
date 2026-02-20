@@ -22,14 +22,14 @@ header {
     background: linear-gradient(135deg, #111827, #020617);
     padding: 40px 20px;
     text-align: center;
-    border-bottom: 3px solid #3776ab; /* azul Python */
+    border-bottom: 3px solid #3776ab;
     box-shadow: 0 4px 25px rgba(0,0,0,0.4);
 }
 
 header h1 {
     font-size: 28px;
     margin-bottom: 10px;
-    color: #ffd43b; /* amarillo Python */
+    color: #ffd43b;
 }
 
 header p {
@@ -136,6 +136,32 @@ li {
     margin-bottom: 5px;
 }
 
+/* ===== ENCUESTA ===== */
+
+.encuesta {
+    text-align: center;
+}
+
+.boton-encuesta {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 16px 32px;
+    font-size: 18px;
+    background: linear-gradient(45deg, #3776ab, #ffd43b);
+    color: #020617;
+    text-decoration: none;
+    border-radius: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+    box-shadow: 0 5px 20px rgba(55,118,171,0.4);
+}
+
+.boton-encuesta:hover {
+    transform: scale(1.07);
+    box-shadow: 0 10px 30px rgba(255,212,59,0.4);
+}
+
 /* ===== FOOTER ===== */
 
 footer {
@@ -147,7 +173,8 @@ footer {
     margin-top: 40px;
 }
 
-/* ===== RESPONSIVE MOVILES (SOLUCION DEFINITIVA) ===== */
+/* ===== RESPONSIVE MOVILES ===== */
+
 @media screen and (max-width: 900px) {
 
     header {
@@ -172,10 +199,8 @@ footer {
     }
 
     header h1 {
-        margin-top: 90px;   /* 👈 BAJA EL TITULO */
+        margin-top: 90px;
         font-size: 22px;
         text-align: center;
     }
-}
-
 }
